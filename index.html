@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re-Du | From PET waste back to PET</title>
+  <meta name="description" content="Re-Du turns hard-to-recycle PET waste, bottles, film, textiles and carpet, into W2V™ Monomer (BHET) and W2V™ PET with the same chemistry as virgin." />
+  <meta name="theme-color" content="#060A09" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Re-Du" />
+  <meta property="og:title" content="Re-Du | From PET waste back to PET" />
+  <meta property="og:description" content="Hard-to-recycle PET, from colored bottles and film to post-consumer carpet, rebuilt into W2V™ Monomer (BHET) with the same chemistry as virgin." />
+  <meta property="og:image" content="/img/monomer.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="is-loading">
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__grid"></div>
+    <div class="loader__center">
+      <svg class="loader__ring" viewBox="0 0 120 120">
+        <circle class="loader__ring-track" cx="60" cy="60" r="52" />
+        <circle class="loader__ring-fill" cx="60" cy="60" r="52" />
+      </svg>
+      <div class="loader__mark">RE<span>/</span>DU</div>
+    </div>
+    <div class="loader__status mono"><span class="loader__dot"></span><span id="loaderStatus">Collecting PET waste</span></div>
+    <div class="loader__count"><span id="loaderCount">000</span><sup>%</sup></div>
+    <div class="loader__formula mono">C<sub>12</sub>H<sub>14</sub>O<sub>6</sub> · BHET</div>
+    <div class="loader__curtain"></div>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label"></span></div></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Re-Du home">
+      <svg class="logo-loop" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4a16 16 0 1 1-15.2 11" /><path d="M2 9l3 6.5 6.6-2.7" /></svg>
+      <span>RE<b>/</b>DU</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#process" data-hover>Process</a>
+      <a href="#carpet" data-hover>Carpet <i class="nav__new">New</i></a>
+      <a href="https://www.reduplastic.com/about-us" data-hover>About</a>
+      <a href="#news" data-hover>News</a>
+    </nav>
+    <a href="#contact" class="btn btn--lime nav__cta" data-magnetic><span>Contact us</span></a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true" inert>
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#process"><small>01</small>Process</a>
+      <a href="#carpet"><small>02</small>Carpet</a>
+      <a href="#plants"><small>03</small>Plants</a>
+      <a href="#news"><small>04</small>News</a>
+      <a href="https://www.reduplastic.com/about-us"><small>05</small>About</a>
+      <a href="#contact"><small>06</small>Contact</a>
+    </nav>
+    <div class="menu__foot mono"><a href="mailto:info@reduplastic.com">info@reduplastic.com</a><span>Knoxville, TN</span></div>
+  </div>
+
+  <main id="top">
+    <span id="main" tabindex="-1"></span>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__gl" id="gl"></canvas>
+      <div class="hero__vignette"></div>
+      <div class="hero__inner">
+        <div class="hero__top">
+          <p class="eyebrow hero__eyebrow"><span class="pulse"></span>W2V™ = Waste to Virgin</p>
+          <a href="#carpet" class="hero__chip" data-hero-fade><b>New</b>Carpet recycling, our second beachhead <i>→</i></a>
+        </div>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__in" data-hero-line>From PET waste</span></span>
+          <span class="line"><span class="line__in line__in--lime" data-hero-line>back to PET.</span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__lede" data-hero-fade>Re-Du turns hard-to-recycle PET waste, from colored bottles and film to <b>post-consumer carpet</b>, into <b>W2V™ Monomer</b> (BHET), the molecular building block of PET and polyester. PET made from it, <b>W2V™ PET</b>, has the same chemistry as virgin PET.</p>
+          <div class="hero__ctas" data-hero-fade>
+            <a href="#contact" class="btn btn--lime" data-magnetic data-intent="waste"><span>I have PET waste</span><i class="btn__arrow">→</i></a>
+            <a href="#contact" class="btn btn--ghost" data-magnetic data-intent="supply"><span>I use BHET or PET</span><i class="btn__arrow">→</i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__hud mono" data-hero-fade>
+        <div><span>State</span><b id="hudState">Mixed PET waste</b></div>
+        <div><span>Process</span><b>&lt;200 °C · 1 atm</b></div>
+        <div><span>Catalyst</span><b>ORNL organocatalyst</b></div>
+      </div>
+      <div class="hero__final" aria-hidden="true">
+        <p class="mono">C<sub>12</sub>H<sub>14</sub>O<sub>6</sub> · BHET</p>
+        <p class="hero__final-title">W2V™ Monomer.</p>
+        <p class="hero__final-sub">Pure white, from any color of waste.</p>
+      </div>
+      <div class="hero__scroll mono"><span>Scroll to depolymerize</span><i></i></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-label="Waste streams we've tested">
+      <div class="marquee__track">
+        <span>Colored bottles</span><em>✳</em><span>Adhesive-backed film</span><em>✳</em><span>Metallized film</span><em>✳</em><span>Coated ribbon film</span><em>✳</em><span>Ocean plastic</span><em>✳</em><span>Polyester textiles</span><em>✳</em><span>Post-consumer carpet</span><em>✳</em>
+        <span>Colored bottles</span><em>✳</em><span>Adhesive-backed film</span><em>✳</em><span>Metallized film</span><em>✳</em><span>Coated ribbon film</span><em>✳</em><span>Ocean plastic</span><em>✳</em><span>Polyester textiles</span><em>✳</em><span>Post-consumer carpet</span><em>✳</em>
+      </div>
+    </div>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="manifesto section">
+      <p class="eyebrow">01 — Why Re-Du</p>
+      <h2 class="manifesto__text" data-words>We start where mechanical recycling stops.</h2>
+      <div class="manifesto__cols">
+        <p data-reveal>Mechanical recycling grinds and remelts clean, sorted bottles, and it does that job well.</p>
+        <p data-reveal>Re-Du takes the <mark>colored, coated, adhesive-backed and mixed PET</mark> it can't use, including recyclers' own reject streams, and rebuilds it from the molecule up into PET with the same chemistry as virgin.</p>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS (horizontal) ============ -->
+    <section class="process" id="process">
+      <div class="process__pin">
+        <div class="process__head">
+          <p class="eyebrow">02 — How it works</p>
+          <h2 class="h2">Many kinds of waste in.<br /><span class="lime">One clean building block out.</span></h2>
+          <div class="process__progress"><i id="processBar"></i></div>
+        </div>
+        <div class="process__track" id="processTrack">
+          <article class="step">
+            <div class="step__num">01</div>
+            <div class="step__media" data-cursor="Waste"><img src="/img/test-bottles.jpg" alt="Bottle, cap and label separated after the PET converts to BHET" loading="lazy" /></div>
+            <div class="step__body">
+              <h3>Waste in</h3>
+              <p>Colored, coated, printed, adhesive-backed and mixed PET. Bottles go in with caps and labels still on.</p>
+              <ul class="tags"><li>Bottles</li><li>Film</li><li>Textiles</li><li>Carpet</li></ul>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step__num">02</div>
+            <div class="step__media" data-cursor="Catalyst"><img src="/img/test-reactor.jpg" alt="Mixed bottles processed at bench scale in a 5-liter reactor" loading="lazy" /></div>
+            <div class="step__body">
+              <h3>The catalyst picks out the PET</h3>
+              <p>A selective organocatalyst from Oak Ridge National Laboratory breaks only the PET down, below 200 °C at normal pressure, in commercially available equipment.</p>
+              <ul class="tags"><li>&lt;200 °C</li><li>1 atm</li><li>Licensed from ORNL</li></ul>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step__num">03</div>
+            <div class="step__media" data-cursor="Monomer"><img src="/img/monomer.jpg" alt="White W2V Monomer (BHET) crystals" loading="lazy" /></div>
+            <div class="step__body">
+              <h3>W2V™ Monomer comes out</h3>
+              <p>Pure white BHET from any color of waste. Caps, labels, adhesives and coatings stay behind as separate solids.</p>
+              <ul class="tags"><li>BHET</li><li>Pure white</li><li>Solids filtered out</li></ul>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step__num">04</div>
+            <div class="step__media" data-cursor="PET"><img src="/img/pet.jpg" alt="W2V PET made from the monomer" loading="lazy" /></div>
+            <div class="step__body">
+              <h3>Back into W2V™ PET</h3>
+              <p>The monomer feeds the polymerization lines PET producers already run. Same chemistry as virgin PET.</p>
+              <ul class="tags"><li>Drop-in</li><li>Virgin-grade chemistry</li></ul>
+            </div>
+          </article>
+          <article class="step step--loop">
+            <div class="loop">
+              <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="80" /><path d="M100 20 a80 80 0 1 1 -76 55" /><path d="M14 66 l10 10 l10 -13" /></svg>
+              <span>W2V™</span>
+            </div>
+            <h3>And the loop closes.</h3>
+            <p>Used PET products come back in as feedstock, again and again.</p>
+            <a href="https://www.reduplastic.com/our-process" class="link-arrow" data-hover>Full process <i>→</i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS / AUDIENCE ============ -->
+    <section class="audience section" id="audience">
+      <div class="audience__head">
+        <p class="eyebrow">03 — Who we work with</p>
+        <h2 class="h2" data-split>Two doors in.</h2>
+      </div>
+      <div class="audience__grid">
+        <article class="card card--waste" data-tilt>
+          <div class="card__glare"></div>
+          <p class="card__kicker mono">For waste producers</p>
+          <h3>Have PET scrap that ends up in a landfill?</h3>
+          <p>Film converters, label and packaging makers, printers, bottlers and textile manufacturers: send us a sample of the PET waste you can't recycle today.</p>
+          <ul class="checks">
+            <li>Colored, coated, printed or adhesive-backed PET</li>
+            <li>Multilayer film, labels, textiles and mixed scrap</li>
+            <li>We test it in our lab and tell you what it can become</li>
+          </ul>
+          <a href="#contact" class="btn btn--ember" data-magnetic><span>Send us a sample</span><i class="btn__arrow">→</i></a>
+          <img class="card__img" src="/img/test-film.jpg" alt="" loading="lazy" />
+        </article>
+        <article class="card card--supply" data-tilt>
+          <div class="card__glare"></div>
+          <p class="card__kicker mono">For BHET &amp; PET users</p>
+          <h3>Made from waste, with the same chemistry as virgin.</h3>
+          <p><b>BHET users:</b> PET, polyester and specialty-resin makers can use W2V™ Monomer in place of BHET made from oil.</p>
+          <p><b>PET users:</b> bottle, packaging, film and fiber makers can use W2V™ PET, with the same chemistry as virgin PET.</p>
+          <a href="#contact" class="btn btn--lime" data-magnetic><span>Talk to us about supply</span><i class="btn__arrow">→</i></a>
+          <img class="card__img" src="/img/monomer.jpg" alt="" loading="lazy" />
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CARPET (NEW) ============ -->
+    <section class="carpet" id="carpet">
+      <div class="carpet__intro section">
+        <p class="eyebrow eyebrow--ember">04 — Our second beachhead</p>
+        <h2 class="carpet__title">
+          <span class="line"><span class="line__in" data-rise>Carpet.</span></span>
+          <span class="line"><span class="line__in lime" data-rise>Only the PET reacts.</span></span>
+        </h2>
+        <p class="carpet__lede" data-reveal>Most carpet fiber is PET, tangled up with polypropylene backing, adhesives, fillers and salts. Mechanical recycling can't untangle it, so almost all old carpet is landfilled. Our catalyst deconstructs only the PET into the <b>same W2V™ Monomer</b>, and leaves the rest behind to be recovered.</p>
+
+        <div class="stats stats--carpet">
+          <div class="stat" data-reveal><div class="stat__n"><span data-count="2" data-decimals="0">0</span>–<span data-count="3.5" data-decimals="1">0</span><small>Mt</small></div><p>of post-consumer carpet discarded in the U.S. every year</p></div>
+          <div class="stat" data-reveal><div class="stat__n">~<span data-count="94">0</span><small>%</small></div><p>of that carpet is landfilled today</p><div class="bar"><i style="--w:94%"></i></div></div>
+          <div class="stat" data-reveal><div class="stat__n"><span data-count="5">0</span><small>% by 2028</small></div><p>carpet-derived recycled content required in California. Bottle PET doesn't count.</p></div>
+        </div>
+        <p class="source mono">Sources: ORNL TCF technical volume (2024); CARE 2025 California report; California AB 863.</p>
+      </div>
+
+      <!-- pinned 4-step story -->
+      <div class="cstory" id="cstory">
+        <div class="cstory__pin">
+          <div class="cstory__left">
+            <p class="eyebrow">From old carpet to W2V™ Monomer</p>
+            <ol class="cstory__steps">
+              <li class="is-active"><span>01</span><div><h4>Carpet</h4><p>Post-consumer carpet, about 80–85% PET.</p></div></li>
+              <li><span>02</span><div><h4>Shredded</h4><p>Shredded, with backing and fillers still in it.</p></div></li>
+              <li><span>03</span><div><h4>Reaction</h4><p>One catalyst, below 200 °C, at normal pressure.</p></div></li>
+              <li><span>04</span><div><h4>W2V™ Monomer</h4><p>White BHET, ready to be made into new PET.</p></div></li>
+            </ol>
+          </div>
+          <div class="cstory__right">
+            <div class="cstory__frames">
+              <figure class="cframe"><img src="/img/carpet-1-carpet.jpg" alt="Samples of post-consumer carpet" /><figcaption class="mono">01 · Carpet</figcaption></figure>
+              <figure class="cframe"><img src="/img/carpet-2-shredded.jpg" alt="Shredded carpet feed" /><figcaption class="mono">02 · Shredded</figcaption></figure>
+              <figure class="cframe"><img src="/img/carpet-3-reaction.jpg" alt="Carpet deconstruction reaction in the lab" /><figcaption class="mono">03 · Reaction</figcaption></figure>
+              <figure class="cframe"><img src="/img/carpet-4-bhet.jpg" alt="White BHET recovered from carpet" /><figcaption class="mono">04 · W2V™ Monomer</figcaption></figure>
+            </div>
+            <div class="cstory__dial mono"><span id="cDial">01</span>/04</div>
+            <div class="cstory__timer"><i id="cTimer"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section carpet__results">
+        <div class="results">
+          <div class="result"><b>~<span data-count="90">0</span>%</b><span>BHET yield at 300 g scale</span></div>
+          <div class="result"><b>&gt;<span data-count="95">0</span>%</b><span>PET conversion</span></div>
+          <div class="result"><b><span data-count="5">0</span>×</b><span>catalyst reuse</span></div>
+          <div class="result"><b><span data-count="45">0</span> h</b><span>on stream across 15 batches</span></div>
+        </div>
+        <p class="note">Laboratory results on real post-consumer carpet (about 80–85% PET, 10–15% PP/PE, ~5% backing, fillers and salts). The BHET was made back into PET at gram scale and compared with commercial PET. Work with Oak Ridge National Laboratory under a DOE Technology Commercialization Fund project.</p>
+
+        <div class="scale">
+          <h3 class="h3">Scaling carpet up</h3>
+          <div class="scale__line"><i id="scaleFill"></i></div>
+          <ol class="scale__steps">
+            <li class="done"><em>Done</em><b>300 g</b><span>Real carpet at 0.5, 5 and 300 g; ~90% BHET yield.</span></li>
+            <li><em>2027</em><b>1 kg</b><span>500 g–1 kg batches in a 5 L reactor, with purification and cost analysis alongside ORNL.</span></li>
+            <li><em>Next</em><b>20 L</b><span>Bench validation, up to 5 kg of dry carpet per batch.</span></li>
+            <li><em>Then</em><b>500 L</b><span>Pre-pilot unit operations, about 0.5 dry tonnes per day.</span></li>
+            <li class="goal"><em>Goal</em><b>10 kt/yr</b><span>First regional plant at a carpet collection hub.</span></li>
+          </ol>
+        </div>
+
+        <div class="partner">
+          <div>
+            <h3 class="h3">Work with us on carpet</h3>
+            <p>We're looking for partners across the carpet loop:</p>
+          </div>
+          <ul class="partner__list">
+            <li data-reveal><i>↳</i>Collectors and recyclers with PET carpet to test</li>
+            <li data-reveal><i>↳</i>Carpet makers who need carpet-derived recycled content</li>
+            <li data-reveal><i>↳</i>PET producers to qualify carpet-derived BHET</li>
+          </ul>
+          <a href="#contact" class="btn btn--lime" data-magnetic data-intent="carpet"><span>Send us a carpet sample</span><i class="btn__arrow">→</i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANTS ============ -->
+    <section class="plants section" id="plants">
+      <div class="plants__copy">
+        <p class="eyebrow">05 — Modular plants</p>
+        <h2 class="h2"><span data-split>We go to the waste.</span><br /><span class="dim" data-split>The waste doesn't come to us.</span></h2>
+        <p data-reveal>Shipping low-value waste across the country costs more than it's worth. Re-Du's plants are modular and built near the waste: regional plants processing about <b>10,000 tonnes</b> of PET waste a year, and smaller movable units planned for sites with less volume. Each plant makes W2V™ Monomer; PET producers turn it into PET.</p>
+        <ol class="stage">
+          <li data-reveal><em>Today</em><b>Lab &amp; bench scale</b><span>Validated on 10+ real-world PET waste streams.</span></li>
+          <li data-reveal><em>2027–2028</em><b>30 t/yr pilot</b><span>A pilot running on industrial waste.</span></li>
+          <li data-reveal><em>Commercial</em><b>~10,000 t/yr</b><span>Modular regional plant near the waste.</span></li>
+        </ol>
+      </div>
+      <div class="plants__viz" aria-hidden="true">
+        <svg viewBox="0 0 500 500" id="plantsSvg">
+          <defs>
+            <radialGradient id="g1"><stop offset="0" stop-color="#C8FF2E" stop-opacity=".55" /><stop offset="1" stop-color="#C8FF2E" stop-opacity="0" /></radialGradient>
+          </defs>
+          <g class="pv-rings"><circle cx="250" cy="250" r="70" /><circle cx="250" cy="250" r="140" /><circle cx="250" cy="250" r="210" /></g>
+          <g class="pv-lines"></g>
+          <circle cx="250" cy="250" r="60" fill="url(#g1)" class="pv-glow" />
+          <g class="pv-hub"><rect x="226" y="226" width="48" height="48" rx="10" /><text x="250" y="256" text-anchor="middle">W2V</text></g>
+          <g class="pv-sources"></g>
+        </svg>
+        <p class="plants__caption mono">Regional plant · waste sources within reach</p>
+      </div>
+    </section>
+
+    <!-- ============ PROOF ============ -->
+    <section class="proof section">
+      <div class="proof__grid">
+        <div class="proof__item" data-reveal><b class="proof__big">ORNL</b><p>Catalyst technology licensed from Oak Ridge National Laboratory</p></div>
+        <div class="proof__item" data-reveal><b class="proof__big">~$<span data-count="1.1" data-decimals="1">0</span>M</b><p>Non-dilutive support from the U.S. Department of Energy and the State of Tennessee</p></div>
+        <div class="proof__item" data-reveal><b class="proof__big">Pilot</b><p>Signed pilot evaluation agreement with an industrial film manufacturer</p></div>
+        <div class="proof__item" data-reveal><b class="proof__big"><span data-count="10">0</span>+</b><p>Real-world PET waste streams converted in the lab</p></div>
+      </div>
+      <div class="logos mono">
+        <span>U.S. Department of Energy</span><span>Oak Ridge National Laboratory</span><span>State of Tennessee · LaunchTN</span><span>Innovation Crossroads</span><span>R&amp;D 100 · 2024</span>
+      </div>
+    </section>
+
+    <!-- ============ NEWS ============ -->
+    <section class="news section" id="news">
+      <div class="news__head">
+        <div><p class="eyebrow">06 — Latest news</p><h2 class="h2" data-split>What's new at Re-Du</h2></div>
+        <a href="https://www.reduplastic.com/news" class="link-arrow" data-hover>All news <i>→</i></a>
+      </div>
+      <div class="news__grid">
+        <a class="ncard" href="https://www.linkedin.com/feed/update/urn:li:activity:7518171980295016448/" target="_blank" rel="noopener" data-tilt data-cursor="Watch">
+          <div class="ncard__img"><img src="/img/news-video.jpg" alt="W2V Monomer (BHET) and PET made from it" loading="lazy" /></div>
+          <div class="ncard__meta mono"><span>Oct 2026</span><span>Video</span></div>
+          <h3>Our process on video: from waste bottle to clear PET</h3>
+        </a>
+        <a class="ncard" href="https://www.linkedin.com/feed/update/urn:li:activity:7491753148747837440/" target="_blank" rel="noopener" data-tilt data-cursor="Read">
+          <div class="ncard__img"><img src="/img/news-cvc.jpg" alt="Chemical Ventures Conference 2026" loading="lazy" /></div>
+          <div class="ncard__meta mono"><span>Aug 2026</span><span>Event</span></div>
+          <h3>Re-Du pitches at the Chemical Ventures Conference</h3>
+        </a>
+        <a class="ncard" href="https://www.linkedin.com/feed/update/urn:li:activity:7487637807482556416/" target="_blank" rel="noopener" data-tilt data-cursor="Read">
+          <div class="ncard__img"><img src="/img/news-flexcon.jpg" alt="Rolls of adhesive-backed industrial film" loading="lazy" /></div>
+          <div class="ncard__meta mono"><span>Jul 2026</span><span>Partnership</span></div>
+          <h3>Pilot evaluation agreement with Flexcon, and a new CTO</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" id="contact">
+      <div class="cta__blob" id="ctaBlob"></div>
+      <div class="cta__inner section">
+        <a href="https://www.reduplastic.com/contact" class="cta__badge" data-cursor="Go" aria-label="Send us a sample">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="badgeCircle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+            <text><textPath href="#badgeCircle">Send us a sample · Waste to virgin · W2V™ · </textPath></text>
+          </svg>
+          <span class="cta__badge-core">→</span>
+        </a>
+        <p class="eyebrow">07 — Let's talk</p>
+        <h2 class="cta__title"><span data-split>Got PET waste</span><br /><span data-split>you can't recycle?</span></h2>
+        <p class="cta__sub" data-reveal>Or need recycled feedstock? Tell us what you have or what you need. We reply within two business days.</p>
+        <div class="cta__ctas" data-reveal>
+          <a href="https://www.reduplastic.com/contact" class="btn btn--lime btn--xl" data-magnetic><span>I have PET waste</span><i class="btn__arrow">→</i></a>
+          <a href="https://www.reduplastic.com/contact" class="btn btn--ghost btn--xl" data-magnetic><span>I use BHET or PET</span><i class="btn__arrow">→</i></a>
+        </div>
+        <div class="cta__contact mono" data-reveal>
+          <a href="mailto:info@reduplastic.com" data-hover>info@reduplastic.com</a>
+          <a href="tel:+15155205673" data-hover>(515) 520-5673</a>
+          <span>Knoxville, Tennessee</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__top section">
+      <p class="footer__claim">Waste in.<br /><span class="lime">Virgin out.</span></p>
+      <nav class="footer__links">
+        <a href="https://www.reduplastic.com/our-process" data-hover>Our Process</a>
+        <a href="https://www.reduplastic.com/about-us" data-hover>About Us</a>
+        <a href="https://www.reduplastic.com/news" data-hover>News</a>
+        <a href="https://www.reduplastic.com/contact" data-hover>Contact</a>
+      </nav>
+    </div>
+    <div class="footer__mark" id="footerMark" aria-hidden="true"><span>RE</span><span class="slash">/</span><span>DU</span></div>
+    <div class="footer__base section mono">
+      <span>Catalyst technology licensed from Oak Ridge National Laboratory.</span>
+      <span>© 2026 Re-Du</span>
+      <a href="#top" data-hover>Back to top ↑</a>
+    </div>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "redu-home",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "vite": "5.4.10"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@4.24.0"
+  }
+}
